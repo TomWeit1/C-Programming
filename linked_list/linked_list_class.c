@@ -47,6 +47,26 @@ int l_len(list * lst){
     return len;
 }
 
+node * l_head(list * lst){
+    return lst->head;
+};
+
+node * l_last(list * lst){
+    return lst->head->before;
+};
+
+node * l_next(node * n){
+    return n->next;
+};
+
+node * l_before(node * n){
+    return n->before;
+}
+
+int l_get_val(node * n){
+    return n->value;
+}
+
 void l_print(list lst){
     node * cur = lst.head;
     do{
